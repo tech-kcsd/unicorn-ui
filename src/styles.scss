@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+// THE MOST IMPORTANT COLORS
+:root {
+    --tiffani: #F1FFFE;
+    --dark-green: #18484C;
+    --green: #348E8A;
+    --background: #FDFDFD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Hack, monospace;
+}
+
+body {
+    background-color: var(--background);
+
+}
