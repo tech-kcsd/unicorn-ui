@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { DashboardHRComponent } from './dashboard/dashboard-hr.component';
+import { DashboardHRComponent } from './dashboard-hr/dashboard-hr.component';
 
 @NgModule({
   declarations: [
