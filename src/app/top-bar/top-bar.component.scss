@@ -1,0 +1,69 @@
+@mixin head-transition {
+    -webkit-transition: all 350ms ease-in-out;
+    -moz-transition: all 350ms ease-in-out;
+    -o-transition: all 350ms ease-in-out;
+    transition: all 350ms ease-in-out;
+}
+
+
+
+.top-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Hack, monospace;
+    background-color: var(--tiffani);
+    width: 100%;
+}
+
+.title {
+    p {
+        margin: 1rem;
+        font-size: 3rem;
+
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all 1s ease-in-out;
+        position: relative;
+        text-align: center;
+
+
+    }
+}
+
+.account {
+    margin-right: 12px;
+
+    a {
+        text-align: right;
+        font-size: 1.5rem;
+        @include head-transition;
+
+        position: relative;
+    }
+}
+
+p,
+a {
+    &::before {
+        content: attr(data-title);
+        @include head-transition;
+
+        color: var(--green);
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+}
